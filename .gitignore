@@ -1,0 +1,28 @@
+
+# Data files (too large for GitHub)
+data/raw/cms_synpuf/*.csv
+data/processed/*.csv
+data/synthetic/*.csv
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+venv/
+env/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model files
+models/*.pkl
+models/*.h5
+models/*.joblib
