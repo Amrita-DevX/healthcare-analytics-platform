@@ -1,0 +1,2 @@
+model,roc_auc,precision,recall,f1_score,test_size,fraud_rate,top_features
+Logistic Regression,0.9981166716213611,0.7027027027027027,0.5652173913043478,0.4943820224719101,13355,0.0034444028453762634,"['payment_percentile', 'provider_payment_cv', 'procedure_code_count', 'provider_volume_percentile', 'provider_avg_payment', 'claim_is_weekend', 'bene_unique_providers', 'provider_avg_payment_percentile', 'CLM_PMT_AMT', 'payment_zscore']"
