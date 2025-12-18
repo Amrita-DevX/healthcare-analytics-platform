@@ -1,0 +1,2 @@
+model,roc_auc,f1_score,precision,recall,accuracy,true_positives,false_positives,false_negatives,true_negatives,training_time_minutes,best_params
+XGBoost,0.9990803869235267,0.7213114754098361,0.5789473684210527,0.9565217391304348,0.9974541370273305,44,32,2,13277,12.682884454727173,"{'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 300, 'subsample': 0.7}"
