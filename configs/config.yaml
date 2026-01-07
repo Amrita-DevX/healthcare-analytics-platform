@@ -1,0 +1,12 @@
+# Why: Changes params without code edits; YAML for teams
+data:
+  churn_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00292/Cellphone+Dataset.zip"  # Replace with healthcare churn later
+  test_size: 0.2
+models:
+  churn:
+    max_depth: 6
+    learning_rate: 0.1
+    target: "churn"
+business:
+  churn_cost_per_member: 6000  # $6K premium revenue
+  retention_goal_pct: 0.12  # 12% improvement

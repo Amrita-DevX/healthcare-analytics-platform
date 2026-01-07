@@ -1,0 +1,7 @@
+# Why: GitHub limits; track experiments in MLflow instead
+data/raw/*
+data/processed/*
+mlruns/
+__pycache__/
+.env
+.DS_Store
