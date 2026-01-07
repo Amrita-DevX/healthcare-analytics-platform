@@ -1,12 +1,18 @@
-# Why: Changes params without code edits; YAML for teams
+# CMS Data Pipeline Configuration
+# Why: Change params without editing code (production standard)
+
 data:
-  churn_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00292/Cellphone+Dataset.zip"  # Replace with healthcare churn later
-  test_size: 0.2
+  churn_threshold_percentile: 0.25      # Bottom 25% utilization = churn
+  high_utilizer_percentile: 0.80        # Top 20% = high utilizer
+  test_size: 0.2                        # Train/test split for Step 3
+
 models:
   churn:
-    max_depth: 6
+    max_depth: 6                        # XGBoost hyperparameters
     learning_rate: 0.1
+    n_estimators: 100
     target: "churn"
+
 business:
-  churn_cost_per_member: 6000  # $6K premium revenue
-  retention_goal_pct: 0.12  # 12% improvement
+  churn_cost_per_member: 6000          # Average premium revenue per member/year
+  retention_goal_pct: 0.12             # Target: 12% improvement
