@@ -1,18 +1,32 @@
-# CMS Data Pipeline Configuration
-# Why: Change params without editing code (production standard)
+# Global Configuration File
+# Purpose: Store all settings in ONE place so you don't hardcode values
 
+# Project Info
+project:
+  name: "healthcare-analytics-platform"
+  version: "1.0.0"
+
+# Data Paths
 data:
-  churn_threshold_percentile: 0.25      # Bottom 25% utilization = churn
-  high_utilizer_percentile: 0.80        # Top 20% = high utilizer
-  test_size: 0.2                        # Train/test split for Step 3
+  raw_path: "data/raw"
+  interim_path: "data/interim"
+  processed_path: "data/processed"
 
-models:
-  churn:
-    max_depth: 6                        # XGBoost hyperparameters
-    learning_rate: 0.1
-    n_estimators: 100
-    target: "churn"
+# Logging Settings
+logging:
+  level: "INFO"
+  log_file: "logs/pipeline.log"
 
-business:
-  churn_cost_per_member: 6000          # Average premium revenue per member/year
-  retention_goal_pct: 0.12             # Target: 12% improvement
+# MLflow Settings
+mlflow:
+  tracking_uri: "http://localhost:5000"
+  experiment_name: "data_loading"
+
+# Data Loading Settings
+data_loading:
+  # File format for saving data
+  output_format: "parquet"  # Options: parquet, csv
+  compression: "snappy"     # Options: snappy, gzip, none
+  
+  # Quality checks
+  min_rows: 1000  # Fail if less than 1000 rows loaded
