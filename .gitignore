@@ -1,6 +1,7 @@
 # Why: GitHub limits; track experiments in MLflow instead
 data/raw/*
 data/processed/*
+data/interim/*
 mlruns/
 __pycache__/
 .env
